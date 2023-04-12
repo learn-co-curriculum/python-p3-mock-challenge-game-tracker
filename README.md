@@ -1,5 +1,4 @@
-# Object Relations Code Challenge - Game Tracker
-(Original from https://github.com/emileypalmquist/python-phase-3-practice-challenges)
+# Mock Code Challenge - Game Tracker (Object Relationships)
 
 For this assignment, we'll be working with a game tracking domain.
 
