@@ -28,7 +28,7 @@ class Game:
         return self._players
     
     def average_score(self, player):
-        player_results = [r for r in self._results if r.player == player]
-        if player_results:
-            return sum([r.score for r in player_results]) / len(player_results)
+        player_scores = [r.score for r in self._results if r.player == player]
+        if player_scores:
+            return sum(player_scores) / len(player_scores)
         return 0
