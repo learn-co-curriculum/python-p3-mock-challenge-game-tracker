@@ -65,7 +65,8 @@ build out any helper methods if needed.
 - `Game property title`
   - Returns the `Game`'s title
   - Titles must be strings greater than 0 characters
-  - if you are using exceptions comment out the test on lines 25 - 32 in the game_test.py and uncomment lines 34 - 38
+  - If you are using exceptions, uncomment lines 25-26 and 32-33 in
+    `testing/game_test.py`.
 
 #### Player
 
@@ -75,17 +76,20 @@ build out any helper methods if needed.
 - `Player property username`
   - Returns the Player's username
   - Usernames must be strings between 2 and 16 characters,
-    inclusive
-  - if you are using exceptions comment out the test on lines 25 - 29 in the player_test.py and uncomment lines 37 - 44
+    inclusive.
+  - If you are using exceptions, uncomment lines 25-29 in
+    `testing/player_test.py`.
 
 #### Result
 
 - `Result __init__(self, player, game, score)`
   - `Result` is initialized with a `Player` instance, a `Game` instance, and a
-    score (number)
+    score (number).
 - `Result property score`
   - Returns the score for the `Result` instance
   - Scores must be integers between 1 and 5000, inclusive
+    - If you are using exceptions, uncomment lines 20-30 in
+    `testing/result_test.py`.
 
 ### Object Relationship Attributes and Properties
 
@@ -100,42 +104,51 @@ build out any helper methods if needed.
 
 #### Player
 
-- `Player results()`
+- `Player results(self, new_result=None)`
+  - Adds new results to instance attribute `player._results` if `new_result`
+    exists.
   - Returns a list of `Result` instances associated with the `Player` instance.
-- `Player games_played()`
+  - _You will need to call this method in `Result.__init__()`._
+- `Player games_played(self)`
   - Returns a list of `Game` instances played by the `Player` instance.
 
 #### Game
 
-- `Game results()`
-  - Returns a list of all the `Result` instances for the `Game`.
-- `Game players()`
-  - Returns a list of all of the `Player` instances that played the `Game`.
+- `Game results(self, new_result=None)`
+  - Adds new results to instance attribute `game._results` if `new_result`
+    exists.
+  - Returns a list of `Result` instances associated with the `Game` instance.
+  - _You will need to call this method in `Result.__init__()`._
+- `Game players(self, new_player=None)`
+  - Adds new results to instance attribute `player._results` if `new_result`
+    exists.
+  - Returns a list of `Result` instances associated with the `Player` instance.
+  - _You will need to call this method in `Result.__init__()`._
 
 ### Aggregate and Association Methods
 
 #### Player
 
-- `Player played_game(game)`
+- `Player played_game(self, game)`
   - Returns `True` if the `Player` has played this `Game` (if there is a
     `Result` instance that has this `Player` and `Game`), returns `False`
     otherwise
-- `Player num_times_played(game)`
-  - Returns the number of times the `Player` instance has played (`Result` instance created) the `Game` instance
-- `Player add_result(game, score)`
-  - A `Game` instance and a score (number) are passed in as arguments
-  - This method should create a new `Result` instance with that `Player` instance, `Game` instance, and score
+- `Player num_times_played(self, game)`
+  - Returns the number of times the `Player` instance has played (`Result`
+    instance created) the `Game` instance
 
 #### Game
 
-- `Game average_score(player)`
+- `Game average_score(self, player)`
   - Returns the average of all the player's scores for the `Game` instance
-  - To average scores, add all result scores together for the player and divide by the total number
-    of results for the player.
+  - To average scores, add all result scores together for the player and divide
+    by the total number of results for the player.
 
 #### Bonus: Aggregate and Association Method
 
-- `Player classmethod highest_scored(game)`
+- `Player classmethod highest_scored(cls, game)`
   - Returns the `Player` instance with the highest average game score.
-  - hint: will need a way to remember all `Player` objects
-  - hint: do you have a method to get the average score on a game for a particular player?
+  - Returns `None` if there are no players.
+  - _hint: will need a way to remember all `Player` objects_
+  - _hint: do you have a method to get the average score on a game for a
+    particular player?_

@@ -1,8 +1,8 @@
+import pytest
+
 from classes.player import Player
 from classes.game import Game
 from classes.result import Result
-import pytest
-
 
 class TestPlayer:
     '''Player in player.py'''
@@ -22,26 +22,17 @@ class TestPlayer:
         player = Player("Saaammmm")
         assert (hasattr(player, "username"))
 
-        player_2 = Player("y")
-        assert (not hasattr(player_2, "username"))
+        # with pytest.raises(Exception):
+        #     Player("y")
 
-        player_3 = Player("this_username_is_too_long")
-        assert (not hasattr(player_3, "username"))
+        # with pytest.raises(Exception):
+        #     Player("this_username_is_too_long")
 
     def test_username_setter(self):
         '''Can change the player's username'''
         player = Player("Saaammmm")
         player.username = "ActuallyTopher"
         assert (player.username == "ActuallyTopher")
-
-    # def test_raise_exception_for_invalid_username(self):
-    #     '''raise exception for an invalid username'''
-    #     with pytest.raises(Exception):
-    #         player = Player("this_username_is_too_long")
-    #     with pytest.raises(Exception):
-    #         player_2 = Player("y")
-    #     with pytest.raises(Exception):
-    #         player_3 = Player(1)
 
     def test_has_many_results(self):
         '''Player has many results.'''
@@ -125,17 +116,14 @@ class TestPlayer:
         assert (player_2.num_times_played(game) == 0)
         assert (player_2.num_times_played(game_2) == 1)
 
-    def test_add_result(self):
-        '''Player's result was created.'''
-        game = Game("Skribbl.io")
-        player = Player('Saaammmm')
-        result_1 = Result(player, game, 2000)
-        result_2 = Result(player, game, 5000)
+    # def test_highest_score(self):
+    #     '''which player has the highest average score for a given game'''
+    #     game = Game("Skribbl.io")
+    #     player = Player('Saaammmm')
+    #     player_2 = Player('ActuallyTopher')
+    #     Result(player, game, 2000)
+    #     Result(player, game, 19)
+    #     Result(player, game, 1900)
+    #     Result(player_2, game, 9)
 
-        assert (len(player.results()) == 2)
-        player.add_result(game, 2000)
-        assert (len(player.results()) == 3)
-        assert (player.results()[2].score == 2000)
-        assert (player.results()[2].game == game)
-
-    # need test for highest_scored classmethod
+    #     assert Player.highest_scored(game) == player
