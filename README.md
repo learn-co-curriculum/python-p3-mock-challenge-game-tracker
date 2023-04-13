@@ -31,6 +31,10 @@ easiest. Be careful: some of the later methods rely on earlier ones.
 **Remember!** This code challenge has tests to help you check your work. You
 can run `pytest` to make sure your code is functional before submitting.
 
+> **NOTE: A number of tests will be passing before you make any changes. Keep an
+> eye on this number to make sure you're maintaining this app's functionality as
+> you write new code!**
+
 We've provided you with a tool that you can use to test your code. To use it,
 run `python debug.py` from the command line. This will start a `ipdb` session
 with your classes defined. You can test out the methods that you write here. You
