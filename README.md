@@ -71,6 +71,7 @@ build out any helper methods if needed.
   - Titles must be strings greater than 0 characters
   - If you are using exceptions, uncomment lines 25-26 and 32-33 in
     `testing/game_test.py`.
+    - `raise Exception` if setter fails
 
 #### Player
 
@@ -83,6 +84,7 @@ build out any helper methods if needed.
     inclusive.
   - If you are using exceptions, uncomment lines 25-29 in
     `testing/player_test.py`.
+    - `raise Exception` if setter fails
 
 #### Result
 
@@ -94,6 +96,7 @@ build out any helper methods if needed.
   - Scores must be integers between 1 and 5000, inclusive
     - If you are using exceptions, uncomment lines 20-30 in
     `testing/result_test.py`.
+    - `raise Exception` if setter fails
 
 ### Object Relationship Attributes and Properties
 
@@ -102,9 +105,11 @@ build out any helper methods if needed.
 - `Result property player`
   - Returns the player for the Result
   - Players must be `Player` instances
+  - `raise Exception` if setter fails
 - `Result property game`
   - Returns the game that was played
   - Games must be `Game` instances
+  - `raise Exception` if setter fails
 
 #### Player
 
