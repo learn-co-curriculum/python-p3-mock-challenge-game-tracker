@@ -22,7 +22,7 @@ start coding_. Remember to identify a single source of truth for your data.
 
 ## Instructions
 
-To get started, run `pipenv install` while inside of this directory.
+To get started, run `pipenv install` while inside of this directory. Then run `pipenv shell` to jump into the shell.
 
 Build out all of the methods listed in the deliverables. The methods are listed
 in a suggested order, but you can feel free to tackle the ones you think are
@@ -30,10 +30,6 @@ easiest. Be careful: some of the later methods rely on earlier ones.
 
 **Remember!** This code challenge has tests to help you check your work. You
 can run `pytest` to make sure your code is functional before submitting.
-
-> **NOTE: A number of tests will be passing before you make any changes. Keep an
-> eye on this number to make sure you're maintaining this app's functionality as
-> you write new code!**
 
 We've provided you with a tool that you can use to test your code. To use it,
 run `python debug.py` from the command line. This will start a `ipdb` session
@@ -71,7 +67,6 @@ build out any helper methods if needed.
   - Titles must be strings greater than 0 characters
   - If you are using exceptions, uncomment lines 25-26 and 32-33 in
     `testing/game_test.py`.
-    - `raise Exception` if setter fails
 
 #### Player
 
@@ -84,7 +79,6 @@ build out any helper methods if needed.
     inclusive.
   - If you are using exceptions, uncomment lines 25-29 in
     `testing/player_test.py`.
-    - `raise Exception` if setter fails
 
 #### Result
 
@@ -96,7 +90,6 @@ build out any helper methods if needed.
   - Scores must be integers between 1 and 5000, inclusive
     - If you are using exceptions, uncomment lines 20-30 in
     `testing/result_test.py`.
-    - `raise Exception` if setter fails
 
 ### Object Relationship Attributes and Properties
 
@@ -105,34 +98,25 @@ build out any helper methods if needed.
 - `Result property player`
   - Returns the player for the Result
   - Players must be `Player` instances
-  - `raise Exception` if setter fails
 - `Result property game`
   - Returns the game that was played
   - Games must be `Game` instances
-  - `raise Exception` if setter fails
 
 #### Player
 
-- `Player results(self, new_result=None)`
-  - Adds new results to instance attribute `player._results` if `new_result`
-    exists.
+- `Player results(self)`
   - Returns a list of `Result` instances associated with the `Player` instance.
-  - _You will need to call this method in `Result.__init__()`._
+
 - `Player games_played(self)`
   - Returns a list of `Game` instances played by the `Player` instance.
 
 #### Game
 
-- `Game results(self, new_result=None)`
-  - Adds new results to instance attribute `game._results` if `new_result`
-    exists.
+- `Game results(self)`
   - Returns a list of `Result` instances associated with the `Game` instance.
-  - _You will need to call this method in `Result.__init__()`._
-- `Game players(self, new_player=None)`
-  - Adds new results to instance attribute `player._results` if `new_result`
-    exists.
+
+- `Game players(self)`
   - Returns a list of `Result` instances associated with the `Player` instance.
-  - _You will need to call this method in `Result.__init__()`._
 
 ### Aggregate and Association Methods
 

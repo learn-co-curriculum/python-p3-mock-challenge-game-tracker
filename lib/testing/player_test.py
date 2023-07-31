@@ -46,7 +46,7 @@ class TestPlayer:
         assert (len(player.results()) == 2)
         assert (result_1 in player.results())
         assert (result_2 in player.results())
-        assert (not result_3 in player.results())
+        assert (result_3 not in player.results())
 
     def test_results_of_type_result(self):
         '''player results are of type Result'''
@@ -72,7 +72,7 @@ class TestPlayer:
 
         assert (game in player.games_played())
         assert (game_3 in player.games_played())
-        assert (not game_2 in player.games_played())
+        assert (game_2 not in player.games_played())
 
     def test_games_of_type_game(self):
         '''Player's games played are of type Game'''

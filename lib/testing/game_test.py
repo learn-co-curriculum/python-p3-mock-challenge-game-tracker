@@ -44,7 +44,7 @@ class TestGame:
         assert (len(game.results()) == 2)
         assert (result_1 in game.results())
         assert (result_2 in game.results())
-        assert (not result_3 in game.results())
+        assert (result_3 not in game.results())
 
     def test_results_of_type_result(self):
         '''game results are of type Result'''
