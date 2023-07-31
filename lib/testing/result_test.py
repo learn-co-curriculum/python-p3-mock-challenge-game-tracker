@@ -1,8 +1,8 @@
+import pytest
+
 from classes.player import Player
 from classes.game import Game
 from classes.result import Result
-import pytest
-
 
 class TestResults:
     '''Result in result.py'''
@@ -17,17 +17,17 @@ class TestResults:
         assert (result_1.score == 2000)
         assert (result_2.score == 5000)
 
-    # def test_raise_exception_for_invalid_score(self):
-    #     '''raise exception when invalid score'''
-    #     game = Game("Skribbl.io")
-    #     player = Player('Nick')
-    #     result = Result(player, game, 2000)
-    #     with pytest.raises(Exception):
-    #         result.score = 6000
-    #     with pytest.raises(Exception):
-    #         result.score = "500"
-    #     with pytest.raises(Exception):
-    #         result.score = -3
+    def test_raise_exception_for_invalid_score(self):
+        '''raise exception when invalid score'''
+        game = Game("Skribbl.io")
+        player = Player('Nick')
+        result = Result(player, game, 2000)
+        with pytest.raises(Exception):
+            result.score = 6000
+        with pytest.raises(Exception):
+            result.score = "500"
+        with pytest.raises(Exception):
+            result.score = -3
 
     def test_has_a_player(self):
         '''result has a player .'''

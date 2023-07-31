@@ -104,26 +104,19 @@ build out any helper methods if needed.
 
 #### Player
 
-- `Player results(self, new_result=None)`
-  - Adds new results to instance attribute `player._results` if `new_result`
-    exists.
+- `Player results(self)`
   - Returns a list of `Result` instances associated with the `Player` instance.
-  - _You will need to call this method in `Result.__init__()`._
+
 - `Player games_played(self)`
   - Returns a list of `Game` instances played by the `Player` instance.
 
 #### Game
 
-- `Game results(self, new_result=None)`
-  - Adds new results to instance attribute `game._results` if `new_result`
-    exists.
+- `Game results(self)`
   - Returns a list of `Result` instances associated with the `Game` instance.
-  - _You will need to call this method in `Result.__init__()`._
-- `Game players(self, new_player=None)`
-  - Adds new results to instance attribute `player._results` if `new_result`
-    exists.
+
+- `Game players(self)`
   - Returns a list of `Result` instances associated with the `Player` instance.
-  - _You will need to call this method in `Result.__init__()`._
 
 ### Aggregate and Association Methods
 

@@ -22,11 +22,11 @@ class TestPlayer:
         player = Player("Saaammmm")
         assert (hasattr(player, "username"))
 
-        # with pytest.raises(Exception):
-        #     Player("y")
+        with pytest.raises(Exception):
+            Player("y")
 
-        # with pytest.raises(Exception):
-        #     Player("this_username_is_too_long")
+        with pytest.raises(Exception):
+            Player("this_username_is_too_long")
 
     def test_username_setter(self):
         '''Can change the player's username'''
@@ -46,7 +46,7 @@ class TestPlayer:
         assert (len(player.results()) == 2)
         assert (result_1 in player.results())
         assert (result_2 in player.results())
-        assert (not result_3 in player.results())
+        assert (result_3 not in player.results())
 
     def test_results_of_type_result(self):
         '''player results are of type Result'''
@@ -72,7 +72,7 @@ class TestPlayer:
 
         assert (game in player.games_played())
         assert (game_3 in player.games_played())
-        assert (not game_2 in player.games_played())
+        assert (game_2 not in player.games_played())
 
     def test_games_of_type_game(self):
         '''Player's games played are of type Game'''
@@ -116,14 +116,14 @@ class TestPlayer:
         assert (player_2.num_times_played(game) == 0)
         assert (player_2.num_times_played(game_2) == 1)
 
-    # def test_highest_score(self):
-    #     '''which player has the highest average score for a given game'''
-    #     game = Game("Skribbl.io")
-    #     player = Player('Saaammmm')
-    #     player_2 = Player('ActuallyTopher')
-    #     Result(player, game, 2000)
-    #     Result(player, game, 19)
-    #     Result(player, game, 1900)
-    #     Result(player_2, game, 9)
+    def test_highest_score(self):
+        '''which player has the highest average score for a given game'''
+        game = Game("Skribbl.io")
+        player = Player('Saaammmm')
+        player_2 = Player('ActuallyTopher')
+        Result(player, game, 2000)
+        Result(player, game, 19)
+        Result(player, game, 1900)
+        Result(player_2, game, 9)
 
-    #     assert Player.highest_scored(game) == player
+        assert Player.highest_scored(game) == player

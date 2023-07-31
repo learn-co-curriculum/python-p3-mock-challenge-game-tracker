@@ -22,15 +22,15 @@ class TestGame:
         game = Game("Skribbl.io")
         assert (hasattr(game, "title"))
 
-        # with pytest.raises(Exception):
-        #     Game("")
+        with pytest.raises(Exception):
+            Game("")
 
     def test_title_setter(self):
         '''Cannot change the title of the game'''
         game = Game("Skribbl.io")
         
-        # with pytest.raises(Exception):
-        #     game.title = "not Skribbl.io"
+        with pytest.raises(Exception):
+            game.title = "not Skribbl.io"
 
     def test_has_many_results(self):
         '''Game has many results.'''
@@ -44,7 +44,7 @@ class TestGame:
         assert (len(game.results()) == 2)
         assert (result_1 in game.results())
         assert (result_2 in game.results())
-        assert (not result_3 in game.results())
+        assert (result_3 not in game.results())
 
     def test_results_of_type_result(self):
         '''game results are of type Result'''
