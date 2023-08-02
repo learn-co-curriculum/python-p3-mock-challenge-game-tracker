@@ -66,6 +66,7 @@ build out any helper methods if needed.
   - Titles must be of type `str`
   - Titles must be longer than 0 characters
   - Should **not be able** to change after the game is created
+  - _hint: hasattr()_
 #### Player
 
 - `Player __init__(self, username)`
@@ -87,7 +88,7 @@ build out any helper methods if needed.
   - Scores must be of type `int`
   - Scores must be between 1 and 5000, inclusive
   - Should **not be able** to change after the result is created
-
+  - _hint: hasattr()_
 ### Object Relationship Attributes and Properties
 
 #### Result
