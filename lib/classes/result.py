@@ -13,12 +13,10 @@ class Result:
 
     @score.setter
     def score(self, score):
-        if isinstance(score, int) and 1 <= score <= 5000:
+        if isinstance(score, int) and not hasattr(self, "score") and 1 <= score <= 5000:
             self._score = score
-        else:
-            raise AttributeError(
-                "Username must be a string between 2 and 16 characters included."
-            )
+        # else:
+        #     raise Exception
 
     @property
     def player(self):
@@ -28,8 +26,8 @@ class Result:
     def player(self, player):
         if isinstance(player, Player):
             self._player = player
-        else:
-            raise AttributeError("Player must be an instance of class Player")
+        # else:
+        #     raise Exception
 
     @property
     def game(self):
@@ -39,8 +37,8 @@ class Result:
     def game(self, game):
         if isinstance(game, Game):
             self._game = game
-        else:
-            raise AttributeError("Game must be an instance of class Game")
+        # else:
+        #     raise Exception
 
 
 from classes.player import Player

@@ -13,22 +13,21 @@ class Player:
     def username(self, username):
         if isinstance(username, str) and 2 <= len(username) <= 16:
             self._username = username
-        else:
-            raise AttributeError(
-                "Username must be a string between 2 and 16 characters included."
-            )
+        # else:
+        #     raise Exception
 
     def results(self):
         return [result for result in Result.all if result.player is self]
 
     def games_played(self):
-        return [result.game for result in self.results()]
+        return list({result.game for result in self.results()})
 
     def played_game(self, game):
         return game in self.games_played()
 
     def num_times_played(self, game):
-        return self.games_played().count(game)
+        games_played = [result.game for result in self.results()]
+        return games_played.count(game)
 
     @classmethod
     def highest_scored(cls, game):
