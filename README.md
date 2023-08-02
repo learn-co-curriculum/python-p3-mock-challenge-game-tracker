@@ -147,7 +147,7 @@ build out any helper methods if needed.
 
 - `Player classmethod highest_scored(game)`
   - Receives a **game object** as argument 
-  - Returns the player instance with the highest average score for the game provided.
+  - Returns the `Player` instance with the highest average score for the game provided.
   - Returns `None` if there are no players that played the game provided.
   - _hint: will need a way to remember all player objects_
   - _hint: do you have a method to get the average score on a game for a
