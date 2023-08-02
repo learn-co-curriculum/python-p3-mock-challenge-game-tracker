@@ -140,7 +140,7 @@ build out any helper methods if needed.
   - Returns the average of all the player's scores for a particular game instance
   - Reminder: you can calculate the average by adding up all the results' scores of the player specified and dividing by the number of thos results
 
-#### Bonus: Aggregate and Association Method
+### Bonus: Aggregate and Association Method
 
 - `Player classmethod highest_scored()`
   - Receives a **game object** as argument 
@@ -149,8 +149,9 @@ build out any helper methods if needed.
   - _hint: will need a way to remember all player objects_
   - _hint: do you have a method to get the average score on a game for a
     particular player?_
+  - Uncomment lines 151-161 in the player_test file
 
-#### Bonus: For any invalid inputs raise an `Exception`.
+### Bonus: For any invalid inputs raise an `Exception`.
 - First, **comment out** the following lines
   - **game_test.py**
     - lines 25-26
