@@ -22,7 +22,8 @@ start coding_. Remember to identify a single source of truth for your data.
 
 ## Instructions
 
-To get started, run `pipenv install` while inside of this directory. Then run `pipenv shell` to jump into the shell.
+To get started, run `pipenv install` while inside of this directory. 
+Then run `pipenv shell` to jump into the shell.
 
 Build out all of the methods listed in the deliverables. The methods are listed
 in a suggested order, but you can feel free to tackle the ones you think are
@@ -65,8 +66,9 @@ build out any helper methods if needed.
   - Returns the game's title
   - Titles must be of type `str`
   - Titles must be longer than 0 characters
-  - Should **not be able** to change after the game is created
+  - Should **not be able** to change after the game is instantiated
   - _hint: hasattr()_
+
 #### Player
 
 - `Player __init__(self, username)`
@@ -76,7 +78,7 @@ build out any helper methods if needed.
   - Usernames must be of type `str`
   - Usernames must be between 2 and 16 characters,
     inclusive.
-  - Should **be able** to change after the player is created
+  - Should **be able** to change after the player is instantiated
 
 #### Result
 
@@ -87,7 +89,7 @@ build out any helper methods if needed.
   - Returns the result's score
   - Scores must be of type `int`
   - Scores must be between 1 and 5000, inclusive
-  - Should **not be able** to change after the result is created
+  - Should **not be able** to change after the result is instantiated
   - _hint: hasattr()_
 
 ### Object Relationship Methods and Properties
