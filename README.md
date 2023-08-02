@@ -60,7 +60,7 @@ build out any helper methods if needed.
 #### Game
 
 - `Game __init__(self, title)`
-  - `Game` should be initialized with a title
+  - `Game` is initialized with a title
 - `Game property title`
   - Returns the game's title
   - Titles must be of type `str`
@@ -89,7 +89,8 @@ build out any helper methods if needed.
   - Scores must be between 1 and 5000, inclusive
   - Should **not be able** to change after the result is created
   - _hint: hasattr()_
-### Object Relationship Attributes and Properties
+
+### Object Relationship Methods and Properties
 
 #### Result
 
@@ -124,25 +125,25 @@ build out any helper methods if needed.
 
 #### Player
 
-- `Player played_game()`
+- `Player played_game(game)`
   - Receives a **game object** as argument 
   - Returns `True` if the player has played the game object provided
   - Returns `False` otherwise
-- `Player num_times_played()`
+- `Player num_times_played(game)`
   - Receives a **game object** as argument
   - Returns the number of times the player has played the game instance provided
   - Returns 0 if the player never played the game provided
 
 #### Game
 
-- `Game average_score()`
+- `Game average_score(player)`
   - Receives a **player object** as argument
   - Returns the average of all the player's scores for a particular game instance
-  - Reminder: you can calculate the average by adding up all the results' scores of the player specified and dividing by the number of thos results
+  - Reminder: you can calculate the average by adding up all the results' scores of the player specified and dividing by the number of those results
 
 ### Bonus: Aggregate and Association Method
 
-- `Player classmethod highest_scored()`
+- `Player classmethod highest_scored(game)`
   - Receives a **game object** as argument 
   - Returns the player instance with the highest average score for the game provided.
   - Returns `None` if there are no players that played the game provided.
