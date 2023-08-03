@@ -4,8 +4,8 @@ For this assignment, we'll be working with a game tracking domain.
 
 We have three models: `Game`, `Player`, and `Result`.
 
-For our purposes, a `Game` has many `Result`s, a `Player` has many
-`Result`s, and a `Result` belongs to a `Player` and to a `Game`.
+For our purposes, a `Game` has many `Result`s, a `Player` has many `Result`s,
+and a `Result` belongs to a `Player` and to a `Game`.
 
 `Game` - `Player` is a many to many relationship.
 
@@ -22,15 +22,15 @@ start coding_. Remember to identify a single source of truth for your data.
 
 ## Instructions
 
-To get started, run `pipenv install` while inside of this directory. 
-Then run `pipenv shell` to jump into the shell.
+To get started, run `pipenv install` while inside of this directory. Then run
+`pipenv shell` to jump into the shell.
 
 Build out all of the methods listed in the deliverables. The methods are listed
 in a suggested order, but you can feel free to tackle the ones you think are
 easiest. Be careful: some of the later methods rely on earlier ones.
 
-**Remember!** This code challenge has tests to help you check your work. You
-can run `pytest` to make sure your code is functional before submitting.
+**Remember!** This code challenge has tests to help you check your work. You can
+run `pytest` to make sure your code is functional before submitting.
 
 We've provided you with a tool that you can use to test your code. To use it,
 run `python debug.py` from the command line. This will start a `ipdb` session
@@ -76,8 +76,7 @@ build out any helper methods if needed.
 - `Player property username`
   - Returns the player's username
   - Usernames must be of type `str`
-  - Usernames must be between 2 and 16 characters,
-    inclusive.
+  - Usernames must be between 2 and 16 characters, inclusive.
   - Should **be able** to change after the player is instantiated
 
 #### Result
@@ -106,6 +105,7 @@ build out any helper methods if needed.
 #### Player
 
 - `Player results()`
+
   - Returns a list of all results for that player
   - Results must be of type `Result`
 
@@ -116,6 +116,7 @@ build out any helper methods if needed.
 #### Game
 
 - `Game results()`
+
   - Returns a list of all results for that game
   - Results must be of type `Result`
 
@@ -128,7 +129,7 @@ build out any helper methods if needed.
 #### Player
 
 - `Player played_game(game)`
-  - Receives a **game object** as argument 
+  - Receives a **game object** as argument
   - Returns `True` if the player has played the game object provided
   - Returns `False` otherwise
 - `Player num_times_played(game)`
@@ -140,14 +141,17 @@ build out any helper methods if needed.
 
 - `Game average_score(player)`
   - Receives a **player object** as argument
-  - Returns the average of all the player's scores for a particular game instance
-  - Reminder: you can calculate the average by adding up all the results' scores of the player specified and dividing by the number of those results
+  - Returns the average of all the player's scores for a particular game
+    instance
+  - Reminder: you can calculate the average by adding up all the results' scores
+    of the player specified and dividing by the number of those results
 
 ### Bonus: Aggregate and Association Method
 
 - `Player classmethod highest_scored(game)`
-  - Receives a **game object** as argument 
-  - Returns the `Player` instance with the highest average score for the game provided.
+  - Receives a **game object** as argument
+  - Returns the `Player` instance with the highest average score for the game
+    provided.
   - Returns `None` if there are no players that played the game provided.
   - _hint: will need a way to remember all player objects_
   - _hint: do you have a method to get the average score on a game for a
@@ -155,17 +159,18 @@ build out any helper methods if needed.
   - Uncomment lines 151-161 in the player_test file
 
 ### Bonus: For any invalid inputs raise an `Exception`.
+
 - First, **comment out** the following lines
   - **game_test.py**
     - lines 25-26
   - **player_test.py**
     - lines 25-26, 40-41, 44-45
   - **result_test.py**
-    - lines 28-30
+    - lines 29-31
 - Then, **uncomment** the following lines in the test files
   - **game_test.py**
     - lines 29-30, 40-41
   - **player_test.py**
     - lines 29-30, 48-49, and 52-53
   - **result_test.py**
-    - lines 33-34, 37-38, 49-50, and 53-54
+    - lines 34-35, 38-39, 50-51, and 54-55
