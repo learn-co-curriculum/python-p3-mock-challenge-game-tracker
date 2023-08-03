@@ -1,16 +1,15 @@
 class Game:
     def __init__(self, title):
         self.title = title
-        self._results = []
-        self._players = []
-        
-    def results(self, new_result=None):
-        from classes.result import Result
+
+    def results(self):
         pass
-    
-    def players(self, new_player=None):
-        from classes.player import Player
+
+    def players(self):
         pass
-    
+
     def average_score(self, player):
         pass
+
+
+from classes.result import Result
