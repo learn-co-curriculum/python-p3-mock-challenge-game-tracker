@@ -1,12 +1,10 @@
 import pytest
 
-from classes.player import Player
-from classes.game import Game
-from classes.result import Result
+from classes.many_to_many import Player, Game, Result
 
 
 class TestGame:
-    """Game in game.py"""
+    """Game in many_to_many.py"""
 
     def test_has_title(self):
         """Game is initialized with a title"""
@@ -111,4 +109,8 @@ class TestGame:
         Result(player, game, 5000)
         Result(player, game, 4999)
 
+<<<<<<< HEAD
         assert game.average_score(player) == 4999.5
+=======
+        assert game.average_score(player) == 4999.5
+>>>>>>> wip-main-mergeclasses

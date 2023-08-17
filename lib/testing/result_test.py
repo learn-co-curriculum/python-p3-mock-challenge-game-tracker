@@ -1,12 +1,9 @@
 import pytest
 
-from classes.player import Player
-from classes.game import Game
-from classes.result import Result
-
+from classes.many_to_many import Player, Game, Result
 
 class TestResults:
-    """Result in result.py"""
+    """Result in many_to_many.py"""
 
     def test_has_score(self):
         """Result is initialized with a score"""
@@ -109,4 +106,8 @@ class TestResults:
 
         assert len(Result.all) == 2
         assert result_1 in Result.all
+<<<<<<< HEAD
         assert result_2 in Result.all
+=======
+        assert result_2 in Result.all
+>>>>>>> wip-main-mergeclasses
