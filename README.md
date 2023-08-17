@@ -174,4 +174,3 @@ build out any helper methods if needed.
     - lines 29-30, 48-49, and 52-53
   - **result_test.py**
     - lines 34-35, 38-39, 50-51, and 54-55
-  
