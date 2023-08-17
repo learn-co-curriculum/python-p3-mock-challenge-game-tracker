@@ -1,12 +1,12 @@
 import pytest
 
-from classes.player import Player
-from classes.game import Game
-from classes.result import Result
+from classes.many_to_many import Player
+from classes.many_to_many import Game
+from classes.many_to_many import Result
 
 
 class TestPlayer:
-    """Player in player.py"""
+    """Player in many_to_many.py"""
 
     def test_has_username(self):
         """Player is initialized with an username"""
